@@ -8,8 +8,16 @@
         body {
             background-color: rgb(255, 219, 239);
         }
-        body { margin-top: 100px;margin-right: 200px;margin-left: 200px;margin-bottom: 100px;}
 
+        /* Apply margin for laptops and larger screens */
+        @media screen and (min-width: 768px) {
+            body {
+                margin-top: 100px;
+                margin-right: 200px;
+                margin-left: 200px;
+                margin-bottom: 100px;
+            }
+        }
     </style> 
 </head>
 <body>
