@@ -44,6 +44,13 @@ p{
     width: 30%;
     text-align: center;
     border-radius: 10px;
+    
+}
+
+.box_vote:hover {
+    background-color: aquamarine;
+    font-weight: bold;
+
 }
 
 
