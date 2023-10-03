@@ -96,18 +96,17 @@
 </main>
 
 <script>
-    document.getElementById("A").addEventListener("click",function () {
+    document.getElementById("A").addEventListener("click", function () {
         document.getElementById("A-content").style.display = "block";
         document.getElementById("B-content").style.display = "none";
+        document.body.style.backgroundColor = "rgb(255, 217, 190)";
     });
 
-    document.getElementById("B").addEventListener("click",function () {
+    document.getElementById("B").addEventListener("click", function () {
         document.getElementById("A-content").style.display = "none";
         document.getElementById("B-content").style.display = "block";
+        document.body.style.backgroundColor = "rgb(221, 255, 244)";
     });
-
-
-
 </script>
 
 </body>
