@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tina's Assignment-02-Houses or Museums?</title>
+    <title>Tina's Assignment-03-Houses or Museums?</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -11,34 +11,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap" rel="stylesheet">
 
-<style>
-
-    body{
-        background-color: rgb(248, 241, 191);
-      
-        padding: 20px;
-
-        border: 1px dashed rgb(81, 81, 81);
-
-        margin: 50px 200px
-      
-    }
-</style>
-
 
 
 </head>
 <body>
 
+<div class="container">
 
 
-
-<nav> <div class="EN_PT" style="float:right">
+<header>
+ <nav> <div class="EN_PT" style="float:right">
     <a href="../assignment-03/index.html">EN</a> | <a href="./index_PT.html">PT</a></div> 
     
     <div class="Return"><a href="../../index.html">◀ Voltar à página inicial</a></div>
-</nav>
-<br>
+ </nav>
+</header>
 
 <main>
     <section>
@@ -78,6 +65,7 @@
         
         
         <p>
+            <div class="museum_image" style="float:right"> <img src="./MASP_São_Paulo_(cropped).jpg"><br>São Paulo Museum of Art </div>
             Podem ser de grande utilidade as experiências feitas nesse campo, por exemplo, o Museu de Arte de São Paulo. De fato, qual a significação de uma peça isolada, uma obra de arte, mesmo se exposta com a mais perfeita técnica museográfica, se esta obra é “fim em si mesma”, isolada no tempo e no espaço, sem nenhuma ligação com o nosso tempo, sem continuidade histórica? Os visitantes, especialmente os jovens, olharão, superficialmente, os objetos, sem conseguir compreender a sua significação, a sua lição histórica, fornecedora dos meios para compreender o presente. As esculturas barrocas, os santos, as pratas, os azulejos, as pinturas, os altares serão para os visitantes meras curiosidades artísticas. Em termos, quais serão esses meios didáticos? Evidentemente, comentários escritos, breves e sumarentos, acompanhados de fotografias com referências não “doutorais”, uma espécie de comentário cinematográfico. Somente satisfazendo tais necessidades didáticas o museu poderá ocupar um lugar vital e ser digno na gradação dos interesses humanos a serem satisfeitos logo, de aparecer juntamente com as casas.</p>
         
        
@@ -95,19 +83,28 @@
 
 </main>
 
+<footer>
+    Copyright <span>&#169;</span> 2023 Tina Tsai. All rights reserved.
+    </footer>
+    
+
+</div> <!-- close div for .container -->
+
 <script>
     document.getElementById("A").addEventListener("click", function () {
         document.getElementById("A-content").style.display = "block";
         document.getElementById("B-content").style.display = "none";
-        document.body.style.backgroundColor = "rgb(255, 217, 190)";
+        document.querySelector("main").style.backgroundColor = "rgb(255, 217, 190)";
     });
 
     document.getElementById("B").addEventListener("click", function () {
         document.getElementById("A-content").style.display = "none";
         document.getElementById("B-content").style.display = "block";
-        document.body.style.backgroundColor = "rgb(221, 255, 244)";
+        document.querySelector("main").style.backgroundColor = "rgb(221, 255, 244)";
     });
 </script>
+
+
 
 </body>
 </html>
