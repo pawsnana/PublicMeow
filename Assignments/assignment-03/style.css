@@ -1,0 +1,64 @@
+body{
+    font-family: Nunito;
+}
+
+
+.box_0{
+    color:blue
+}
+h1{
+    color:blue;
+    font-size: 32px;
+}
+
+h4{
+    color: rgb(36, 74, 189);
+    font-size: 18;
+    font-family: Nunito;
+    font-style: italic;
+    font-weight: 200;
+    font-display: light;
+}
+
+p{
+    font-size: 16px;
+    font-family: Nunito;
+}
+
+.Return{
+    width: 50%;
+    text-align: left;
+}
+
+.EN_PT{
+    width: 30%;
+    text-align: right;
+}
+
+.box_0{
+    width: 50%;
+}
+
+.box_vote{
+    background: rgb(251, 223, 243);
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+.box_vote:hover {
+    background-color: rgb(128, 255, 212);
+    font-weight: bold;
+
+}
+
+
+.box_2{
+    color: rgb(217, 119, 119);
+    font-size: 14;
+    font-family: Nunito;
+    font-weight: 300;
+    font-display: light;
+}
+

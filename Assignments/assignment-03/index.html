@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tina's Assignment-02-Houses or Museums?</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&display=swap" rel="stylesheet">
+
+<style>
+
+    body{
+        background-color: rgb(248, 241, 191);
+      
+        padding: 20px;
+
+        border: 1px dashed rgb(81, 81, 81);
+
+        margin: 50px 200px
+      
+    }
+</style>
+
+
+
+</head>
+<body>
+
+
+
+
+<nav> <div class="EN_PT" style="float:right">
+    <a href="./index.html">EN</a> | <a href="../assignment-03/index_PT.html">PT</a></div> 
+    
+    <div class="Return"><a href="../../index.html">◀ Back to Homepage</a></div>
+</nav>
+<br>
+
+<main>
+    <section>
+        <div class="box_vote" style="float:right">
+            VOTE:
+             <button class="Button_Practice" id="A">House</button> or 
+             <button class="Button_Practice" id="B">Museum</button>
+     
+             
+     <div id="A-content" style="display:block;"> House +1</div>
+     <div id="B-content" style="display:none;"> Musuem +1</div>
+     </div>
+     
+        <div class="box_0"> 
+            <h1>HOUSES OR MUSEUMS?</h1>
+            <a href="https://en.wikipedia.org/wiki/Lina_Bo_Bardi"><h4> Lina Bo Bardi, 1958</h4></a>
+        </div>
+
+
+
+<div class="box_1">
+        <p>What should come first, houses or museums? Everything at once: the houses, the schools, the museums, the libraries. Urban Planning cannot ignore cultural issues. If in the construction of new neighbourhoods, new housing forms the basis of the city plan (and by housing we also mean the market, the schools and the public services like the hospital and the post offices), the planning of a city cannot overlook two key public buildings that still today are considered an intellectual luxury: <span style="color: brown;"><strong>the Museum and the Library.</strong></span></p>
+        
+        
+    
+        <p>
+        Museum? What is a museum? In everyday life, when we want to describe a person, thing or idea that is outdated, not practical or useful, we often say ‘they belong in a museum’. The expression is a clear indicator of the place museums occupy in contemporary culture, the perception of them as dusty, useless spaces. Sometimes museums are merely the stage for the exhibitionist antics of architects who, rather than designing them to showcase the ‘pieces’, create complex confections with a decorative character that gets in the way of the ‘museology’. On other occasions, the museum is the setting for dilettantes, for ladies who lunch looking for something to fill in the time, who dabble in sculpture, painting or ceramics and exhibit their handicraft in ‘museums’ that generally lack the one thing that ought to be there: namely, a real collection of painting and sculpture, The modern museum has to be a didactic museum, able to marry conservation with the message that it is the art that must be highlighted, while everything else has a far more modest role. This has to be clearly understood by the architect, who should never use the commission as an opportunity for self-aggrandising pyrotechnics such as you find, for example, at the Castello Sforzesco, where Michelangelo’s celebrated Pietà has been encased in a kind of monument that almost immediately acquired some less than respectful nicknames, or like it happened at the exhibition of the Beistegui Collection at the Louvre in Paris, which was displayed against a series of walls draped in red velvet and gold better suited for a jockey club than to a museum.</p>
+        
+       
+        <p>
+        The problem of the museum has to be tackled today on <span style="color: rgb(72, 0, 255);"><em>‘didactic’</em></span> and <span style="color: rgb(76, 5, 255);"><em>‘technical’</em></span> grounds. These foundations are essential if the museum is not to become petrified, that is, entirely useless.</p>
+        
+        
+        <p>
+        The experience gained in this field with the São Paulo Museum of Art can be of great use here. After all, what is the point of an isolated work of art, even if it’s exhibited with the most perfect museological technique, if it remains ‘an end in itself’, with no connection at all to our times, with no historical continuity? The visitors, especially the younger ones, will look at the objects in a superficial way, without understanding their meaning, their historical lessons, the light they can shed on the present. Baroque sculptures, saints, silverware, tiles, paintings, altarpieces - all will be mere artistic curiosities to the visitor. In real terms, what didactic methods should we use? Evidently written texts, brief and succinct, and not in the language of the PhD, accompanied by photographs – in a sort of cinematographic commentary. It is only by satisfying these didactic needs that the museum will be able to occupy a vital place and be worthy in the gradation of human needs demanding prompt solution, and of being built at the same time as the houses.</p>
+        
+       
+        <p>
+        These considerations are of the utmost importance as Bahia stands on the brink of creating what could well one day become - given the importance of its collection and the beauty and poetic fascination of the building that will be its home - the country’s most important museum: the Santa Teresa Museum of Sacred Art. A museum that ought to have its own didactic voice in order to become a ‘true’ museum, which is ‘alive’, and not a ‘museum’ in the most obsolete use of the term.</p>
+        </div>
+        
+        <div class="box_2">
+        <P>
+        First published in Diário de Notícias (Salvador, Bahia), 5 October 1958</P></div>
+        
+    
+    </section>
+
+
+</main>
+
+<script>
+    document.getElementById("A").addEventListener("click", function () {
+        document.getElementById("A-content").style.display = "block";
+        document.getElementById("B-content").style.display = "none";
+        document.body.style.backgroundColor = "rgb(255, 217, 190)";
+    });
+
+    document.getElementById("B").addEventListener("click", function () {
+        document.getElementById("A-content").style.display = "none";
+        document.getElementById("B-content").style.display = "block";
+        document.body.style.backgroundColor = "rgb(221, 255, 244)";
+    });
+</script>
+
+</body>
+</html>
