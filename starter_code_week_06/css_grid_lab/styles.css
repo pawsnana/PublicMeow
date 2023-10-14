@@ -62,6 +62,8 @@ img {
     grid-row-end: 3;
 }
 
+
+
 .item--4{
     grid-column-start: 1;
     grid-column-end: 3;
@@ -86,6 +88,13 @@ img {
     grid-row-end: 5;
 }
 
+.clip-circle{  /* showing the masking in CSS */
 
+    clip-path: circle(150px at center);
 
+}
 
+.freestyle{
+    clip-path: polygon(0% 100%, 10% 50%, 20% 100%, 30% 50%, 40% 100%, 50% 50%, 60% 100%, 70% 50%, 80% 100%, 90% 50%, 100% 100%, 100% 0%, 0% 0%);
+    
+}
