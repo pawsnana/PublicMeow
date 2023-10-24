@@ -1,0 +1,150 @@
+
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+header {
+    display: block;
+    font-size: 10pt;
+}
+
+
+ul.container {
+display: flex;
+flex-wrap: nowrap;
+justify-content: space-around;
+list-style: none;
+background: white;
+margin: 0;
+line-height: 60px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+list-style: none;
+}
+
+.homeicon{
+    width: 8%;
+    height: 8%;
+    object-fit: cover;
+}
+
+.grid-container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 20px;
+
+    padding: 0;
+    box-sizing: border-box;
+}
+
+figure{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+
+}
+
+video {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+.item--1{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.item--2{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+
+    grid-column-start: 3;
+    grid-column-end: 4;
+    
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.item--3{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+
+
+.item--4{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.item--5{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.item--6{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+footer{
+    font-size: 8pt;
+    color: grey
+}
