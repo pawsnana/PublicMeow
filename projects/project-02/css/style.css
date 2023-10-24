@@ -92,7 +92,7 @@ video {
 
 .item--1{
    
-    object-fit: cover;
+   
 
     grid-column-start: 1;
     grid-column-end: 2;
@@ -103,7 +103,7 @@ video {
 
 .item--2{
 
-    object-fit: cover;
+   
 
     grid-column-start: 3;
     grid-column-end: 4;
@@ -114,7 +114,7 @@ video {
 
 .item--3{
  
-    object-fit: cover;
+
 
     grid-column-start: 1;
     grid-column-end: 2;
@@ -127,7 +127,7 @@ video {
 
 .item--4{
   
-    object-fit: cover;
+   
     grid-column-start: 3;
     grid-column-end: 4;
     
@@ -137,7 +137,7 @@ video {
 
 .item--5{
    
-    object-fit: cover;
+  
     grid-column-start: 1;
     grid-column-end: 2;
     
@@ -147,7 +147,7 @@ video {
 
 .item--6{
 
-    object-fit: cover;
+   
     grid-column-start: 3;
     grid-column-end: 4;
     
