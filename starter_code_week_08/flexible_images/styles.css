@@ -33,7 +33,7 @@ body {
 .tint {
     
     background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(207, 105, 105, 0)),
+    linear-gradient(rgba(234, 126, 126, 0.5), rgba(137, 255, 226, 0)),
     url("https://cdn.theasc.com/Rope-Cast-Set-Photo.jpg");
 }
 
@@ -77,6 +77,25 @@ section.third {
     flex-direction: column;
     justify-content: center; /* vertically center on the page */
     align-items: center; /* horizontally center on the page */
+}
+
+.card-wrapper {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgb(208, 121, 121);
+    /*you can use "object-position" to set specific part of the image */
+
+    /*okay I missed out a line here for "bottom.." sth... */
+}
+
+.card-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-container {
+    color: #141414
 }
 
 
