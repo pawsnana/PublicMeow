@@ -57,6 +57,11 @@ list-style: none;
 text-decoration: none;
 }
 
+img.navicon{
+    margin-top: 20px;
+   
+}
+
 .homeicon{
     width: 8%;
     height: 8%;
