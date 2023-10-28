@@ -61,6 +61,7 @@ text-decoration: none;
     width: 8%;
     height: 8%;
     object-fit: cover;
+    padding-top: 2.5px;
 }
 
 /* - - body - - */
