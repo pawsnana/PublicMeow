@@ -85,6 +85,29 @@ img.navicon{
 
 }
 
+figcaption.white {
+    
+    height: 1.2em;
+    width: 100%;
+    margin-top: -54em;
+    float: left top;
+    text-align: top left;
+    color: white;
+    padding: 10px;
+    font-size: 9pt;
+  }
+
+
+figcaption.black {
+    height: 1.2em;
+    width: 100%;
+    margin-top: -59em;
+    float: left top;
+    text-align: top left;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 9pt;
+}
 
 img.item {
     width: 100%;
