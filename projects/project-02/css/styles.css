@@ -68,6 +68,7 @@ img.navicon{
     height: 8%;
     object-fit: cover;
     padding-top: 2.5px;
+   
 }
 
 /* - - body - - */
@@ -111,7 +112,7 @@ figcaption.black {
 
 img.item {
     width: 100%;
-    height: 80%;
+    height: 100%;
     object-fit: cover;
     
 }
