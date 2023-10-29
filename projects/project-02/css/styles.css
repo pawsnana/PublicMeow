@@ -179,9 +179,26 @@ img.item {
 
 
 
+.floatrightinfo{
+    align-content: end;
+    text-align: right;
+    width: 40%;
+    height: 500px;
+}
+
+
+
 
 
 footer{
+
+    height: 500px;
+    width: 100%;
+
     font-size: 8pt;
     color: grey
+}
+
+.footerleft{
+    
 }
