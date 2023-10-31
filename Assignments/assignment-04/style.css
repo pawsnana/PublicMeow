@@ -117,18 +117,33 @@ p{
 @media only screen and (min-width : 275px) {
     
     main {
-        padding: 0px;
+        padding: 10px;
         border: 0.5px dashed #f86d6d;
         color: #141414;
         margin: 0;
         background-color: rgb(248, 241, 191);
-        }
-        header {
+    
+    }
+    
+    header {
             height: 1vh;
             margin: 0px;
             padding-top: 10px;
             padding-bottom: 50px;
-        }
+    }
+
+    .museum_image{
+        
+        width: 5%;
+        padding: 0px;
+        inline-size: auto;
+        font-style: italic;
+        font-weight: bold;
+        align-items: right;
+    }
+    img.image-1{
+        inline-size: 95%;
+    }
 }
 
 
@@ -138,7 +153,7 @@ p{
 
 @media only screen and (min-width : 768px) {
     main {
-        padding: 0px;
+        padding: 10px;
         border: 0.5px dashed #f86d6d;
         color: #141414;
         margin: 0;
