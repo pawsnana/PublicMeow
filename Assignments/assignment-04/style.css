@@ -1,0 +1,176 @@
+body{
+    font-family: Nunito;
+    background-color: rgb(255, 255, 255);
+
+        box-sizing: border-box;
+
+}
+
+body{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+}
+
+main {
+    padding: 50px;
+    border: 0.5px dashed #f86d6d;
+    color: #141414;
+    margin: 50px 100px;
+    background-color: rgb(248, 241, 191);
+    }
+
+
+header {
+    height: 1vh;
+    margin: 50px 100px;
+    padding: 5px;
+}
+
+footer {
+    height: 1vh;
+    margin: 0px 100px;
+    text-align: right;
+    font-size: 9pt;
+    color:rgb(99, 100, 100)
+}
+
+
+
+
+.box_0{
+    color:blue
+}
+h1{
+    color:blue;
+    font-size: 32px;
+}
+
+h4{
+    color: rgb(36, 74, 189);
+    font-size: 18;
+    font-family: Nunito;
+    font-style: italic;
+    font-weight: 200;
+    font-display: light;
+}
+
+p{
+    font-size: 16px;
+    font-family: Nunito;
+}
+
+.Return{
+    width: 50%;
+    text-align: left;
+}
+
+.EN_PT{
+    width: 30%;
+    text-align: right;
+}
+
+.box_0{
+    width: 50%;
+}
+
+.box_vote{
+    background: rgb(251, 223, 243);
+    width: 30%;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+.Botton_Practice{
+    font-family: Nunito;
+    background: rgb(251, 223, 243)
+}
+
+.box_vote:hover {
+    background-color: rgb(128, 255, 212);
+    font-weight: bold;
+
+}
+
+
+.box_2{
+    color: rgb(217, 119, 119);
+    font-size: 14;
+    font-family: Nunito;
+    font-weight: 300;
+    font-display: light;
+}
+
+.museum_image{
+    width: 30%;
+    padding: 10px;
+    inline-size: auto;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+@media only screen and (min-width : 275px) {
+    
+    main {
+        padding: 0px;
+        border: 0.5px dashed #f86d6d;
+        color: #141414;
+        margin: 0;
+        background-color: rgb(248, 241, 191);
+        }
+        header {
+            height: 1vh;
+            margin: 0px;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+}
+
+
+
+
+
+
+@media only screen and (min-width : 768px) {
+    main {
+        padding: 0px;
+        border: 0.5px dashed #f86d6d;
+        color: #141414;
+        margin: 0;
+        background-color: rgb(248, 241, 191);
+        }
+        header {
+            height: 1vh;
+            margin: 0px;
+            padding-top: 10px;
+            padding-bottom: 60px;
+        }
+}
+
+
+
+
+@media only screen and (min-width : 1024px) {
+    main {
+        padding: 50px;
+        border: 0.5px dashed #f86d6d;
+        color: #141414;
+        margin: 50px 100px;
+        background-color: rgb(248, 241, 191);
+        }
+    
+    
+    header {
+        height: 1vh;
+        margin: 50px 100px;
+        padding: 5px;
+    }
+    
+
+}
+
