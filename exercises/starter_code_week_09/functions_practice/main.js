@@ -22,3 +22,8 @@ function callName(name){
 callName("Kevin")
 callName("Chris")
 callName("Sarah")
+
+// additional //
+function printNum(num) { console.log(num)};
+
+function printNum(num) { return (num)}; 
