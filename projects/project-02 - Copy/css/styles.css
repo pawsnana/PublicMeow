@@ -1,4 +1,3 @@
-
 * {
     padding: 0;
     margin: 0;
@@ -7,14 +6,9 @@
 
 html,
 body {
-    height: 100%;
-}
-
-body {
-    /* min-height: 100vh; */
     font-family: 'Nunito Sans', sans-serif;
-    background-color: #ffffff;
-    color: #000000;
+    height: 100%;
+    width: 100%;
 }
 
 header {
@@ -25,6 +19,10 @@ header {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
+    z-index: 1000; /* Ensures the header stays above other content */
+    /* Add background color if necessary */
+
+    height: 80px;
 }
 
 * {
@@ -33,20 +31,19 @@ header {
     box-sizing: border-box;
 }
 
-
-
 ul.container {
 display: flex;
 flex-wrap: nowrap;
 justify-content: space-around;
 list-style: none;
 background: white;
-margin: 0;
+margin: 0px;
 line-height: 60px;
+;
 }
 
 ul {
-  
+    width: 100%;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -61,6 +58,10 @@ a:link { text-decoration: none; color: black;}
 a:visited { text-decoration: none; color: black;}
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
+a:-webkit-any-link {
+   
+    cursor: pointer;
+}
 
 
 li {
@@ -70,41 +71,113 @@ list-style: none;
 text-decoration: none;
 }
 
+img.navicon{
+    margin-top: 20px;
+   
+}
+
 .homeicon{
     width: 8%;
     height: 8%;
     object-fit: cover;
+    padding-top: 2.5px;
+   
 }
 
-
-
-
+/* - - body - - */
 
 
 .grid-container {
-    margin: 20px;
+    margin-top: 160px;
+    margin: 0px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-img {
+    grid-template-columns:  1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px black;
+    
     width: 100%;
-    height: 80%;
-    object-fit: cover;
+   
 }
 
-.item {
-   display: grid;
+video {
+    /* border: 0.25px solid #c9c9c9; */
+    
+    position: relative;
+    width: 100%;
+}
+
+
+
+figure {
+    
+    
+    position: relative;
+    width: 100%;
+    
+   
+}
+
+
+
+
+
+figcaption.white {
+    position: absolute; /* Absolute positioning inside the figure */
+    top: 0; /* Align to the top of the figure */
+    left: 0; /* Align to the left of the figure */
+    /* height: 1.2em; */
+    width: 100%;
+    margin-top: 1em;
+    /* float: left top; */
+    text-align: top left;
+    color: white;
+    padding: 10px;
+    font-size: 9pt;
+    z-index: 1000;
+  }
+
+
+figcaption.black {
+    position: absolute; /* Absolute positioning inside the figure */
+    top: 0; /* Align to the top of the figure */
+    left: 0; /* Align to the left of the figure */
+    /* height: 1.2em; */
+    width: 100%;
+    margin-top: 1em;
+    /* float: left top; */
+    text-align: top left;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 9pt;
+    z-index: 1000;
+}
+
+
+
+
+
+
+img.item {
+   
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     
 }
 
 
 
 
+.item {
+   display: grid;
+   
+}
 
-.item--1{
+
+
+
+/* .item--1{
     grid-column-start: 1;
     grid-column-end: 1;
 
@@ -152,17 +225,79 @@ img {
     
     grid-row-start: 3;
     grid-row-end: 3;
+} */
+
+
+
+
+
+.floatrightinfo{
+    align-content: end;
+    text-align: right;
+    width: 40%;
+    height: 500px;
+    padding: 20px;
 }
 
-
-
-
-
-
+.footerleft{
+    padding: 20px;
+}
 
 
 
 footer{
+
+    height: 500px;
+    width: 100%;
+
     font-size: 8pt;
     color: grey
 }
+
+.footerleft{
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 80px; /* Larger height for mobile */
+    }
+
+    .grid-container {
+        margin-top: 80px; /* Adjusted to match new header height */
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width : 768px) {
+    body{background-color: rgb(255, 255, 255);}
+    
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        margin-top: 80px;
+    }
+    
+
+}
+
+
+
+
+@media only screen and (min-width : 1024px) {
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 80px;
+    }
+    
+
+}
+
