@@ -1,9 +1,14 @@
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 html,
 body {
     font-family: 'Nunito Sans', sans-serif;
     height: 100%;
+    width: 100%;
 }
 
 header {
@@ -14,6 +19,10 @@ header {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
+    z-index: 1000; /* Ensures the header stays above other content */
+    /* Add background color if necessary */
+
+    height: 80px;
 }
 
 * {
@@ -34,7 +43,7 @@ line-height: 60px;
 }
 
 ul {
-  
+    width: 100%;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -49,6 +58,10 @@ a:link { text-decoration: none; color: black;}
 a:visited { text-decoration: none; color: black;}
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
+a:-webkit-any-link {
+   
+    cursor: pointer;
+}
 
 
 li {
@@ -75,57 +88,96 @@ img.navicon{
 
 
 .grid-container {
-    
+    margin-top: 160px;
     margin: 0px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1px black;
+    grid-template-columns:  1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px black;
     
-    
-
+    width: 100%;
+   
 }
 
-figcaption.white {
+video {
+    /* border: 0.25px solid #c9c9c9; */
     
-    height: 1.2em;
+    position: relative;
     width: 100%;
-    margin-top: -54em;
-    float: left top;
+}
+
+
+
+figure {
+    
+    
+    position: relative;
+    width: 100%;
+    
+   
+}
+
+
+
+
+
+figcaption.white {
+    position: absolute; /* Absolute positioning inside the figure */
+    top: 0; /* Align to the top of the figure */
+    left: 0; /* Align to the left of the figure */
+    /* height: 1.2em; */
+    width: 100%;
+    margin-top: 1em;
+    /* float: left top; */
     text-align: top left;
     color: white;
     padding: 10px;
     font-size: 9pt;
+    z-index: 1000;
   }
 
 
 figcaption.black {
-    height: 1.2em;
+    position: absolute; /* Absolute positioning inside the figure */
+    top: 0; /* Align to the top of the figure */
+    left: 0; /* Align to the left of the figure */
+    /* height: 1.2em; */
     width: 100%;
-    margin-top: -59em;
-    float: left top;
+    margin-top: 1em;
+    /* float: left top; */
     text-align: top left;
     color: rgb(0, 0, 0);
     padding: 10px;
     font-size: 9pt;
+    z-index: 1000;
 }
 
+
+
+
+
+
 img.item {
+   
+    
     width: 100%;
     height: 100%;
     object-fit: cover;
     
 }
 
+
+
+
 .item {
    display: grid;
-    
+   
 }
 
 
 
 
-.item--1{
+/* .item--1{
     grid-column-start: 1;
     grid-column-end: 1;
 
@@ -173,7 +225,7 @@ img.item {
     
     grid-row-start: 3;
     grid-row-end: 3;
-}
+} */
 
 
 
@@ -184,9 +236,12 @@ img.item {
     text-align: right;
     width: 40%;
     height: 500px;
+    padding: 20px;
 }
 
-
+.footerleft{
+    padding: 20px;
+}
 
 
 
@@ -202,3 +257,47 @@ footer{
 .footerleft{
     
 }
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        height: 80px; /* Larger height for mobile */
+    }
+
+    .grid-container {
+        margin-top: 80px; /* Adjusted to match new header height */
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width : 768px) {
+    body{background-color: rgb(255, 255, 255);}
+    
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+        margin-top: 80px;
+    }
+    
+
+}
+
+
+
+
+@media only screen and (min-width : 1024px) {
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 80px;
+    }
+    
+
+}
+
