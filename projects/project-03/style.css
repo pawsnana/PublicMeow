@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+#background {
+    width: 200vw; /* Twice the width of the viewport */
+    height: 200vh; /* Twice the height of the viewport */
+    background: linear-gradient(to bottom right, #f9d423, #ff4e50);
+    position: absolute;
+    top: -50vh; /* Offset to center the content */
+    left: -50vw; /* Offset to center the content */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(32, 60px); /* 16 columns with fixed width */
+    grid-template-rows: repeat(18, 60px); /* 9 rows with fixed height */
+    width: 960px; /* Total width */
+    height: 540px; /* Total height */
+    position: relative;
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%);
+}
+
+.grid-cell {
+    border: 1px dashed rgb(255, 255, 255); /* For visibility */
+    /* Other styling as needed */
+}
+
+
+.grid-cell-first {
+    position: fixed; /* Fixed positioning relative to the viewport */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    z-index: 10; /* Ensure it stays above other elements */
+    /* Other styles (font, color, etc.) */
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: 'Red Hat Mono', monospace; /* Setting the font */
+    font-size: 48px;
+    padding-left: 5px;
+}
+
+
+
+/* Additional styling for the 'White Box' if it remains */
+#white-box {
+    grid-column: 5 / span 3; /* Adjust if needed */
+    grid-row: 6 / span 3; /* Adjust if needed */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(35, 219, 133)0;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+
+#shearedImage {
+    transform:  skewY(150deg); /* Skews the image 20 degrees along the X-axis */
+
+    grid-column: 12 / span 1; /* Adjust if needed */
+    grid-row: 10 / span 1;
+
+    
+    display: flex;
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .grid {
+        /* Scale down the grid to fit the mobile screen */
+        transform-origin: top left; /* Ensure the grid scales down from the top left corner */
+        transform: scale(0.5); /* Adjust this value based on actual viewport sizes */
+    }
+    .grid-cell-first, #white-box {
+        /* Adjust the position and size of elements that should not be scaled */
+        transform: scale(1.0); /* Reset scaling for these elements */
+    }
+}
+
+
+
+
