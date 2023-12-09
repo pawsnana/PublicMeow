@@ -114,12 +114,15 @@ document.addEventListener("DOMContentLoaded", function() {
         target.addEventListener('drop', dropIcon);
     });
 
+
+
+
     function checkCompletion(division) {
         let iconsInDivision = division.querySelectorAll('.icon');
         let divisionId = division.id;
         let correctIconsForDivisions = {
             'TD_pickdroplot': ['icon_akali', 'icon_ekko', 'icon_senna'],
-            'div2_K': ['icon_akali', 'icon_ahri', 'icon_kaisa'],
+            
         };
     
         let correctIcons = correctIconsForDivisions[divisionId] || [];
@@ -130,11 +133,16 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     
-        console.log(`Division: ${divisionId}, Correct Count: ${correctCount}`);
-    
         if (correctCount >= 3) {
             division.style.backgroundImage = 'url(backgrounds/TD_1.png)';
-            console.log(`Background image set for division: ${divisionId}`);
+            
+            
+            if (divisionId === 'TD_pickdroplot') {
+                console.log('Three correct icons placed. Displaying iframe for:', divisionId);
+                document.getElementById('TD_link').style.display = 'block';
+            }
         }
     }
+    
+    
 });
