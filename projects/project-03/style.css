@@ -9,78 +9,91 @@ body, html {
     width: 100%;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow: hidden; /* won't scroll i think */
 }
+
+/* for making view port default at 489 and 479 */
+
+
+
 
 #background {
-    width: 200vw; /* Twice the width of the viewport */
-    height: 200vh; /* Twice the height of the viewport */
-    background: linear-gradient(to bottom right, #f9d423, #ff4e50);
+    width: 2638px; 
+    height: 2075px;
     position: absolute;
-    top: -50vh; /* Offset to center the content */
-    left: -50vw; /* Offset to center the content */
+    left: -679px; /* I want it to start at this x location and y for the top below corresponsing to my figma sketch */ /* trial 2 - need to add around 200px?? */
+    top: -659px; 
+    z-index: 0;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(32, 60px); /* 16 columns with fixed width */
-    grid-template-rows: repeat(18, 60px); /* 9 rows with fixed height */
-    width: 960px; /* Total width */
-    height: 540px; /* Total height */
-    position: relative;
-    left: 50%; /* Center horizontally */
-    top: 50%; /* Center vertically */
-    transform: translate(-50%, -50%);
-}
 
 .grid-cell {
-    border: 1px dashed rgb(255, 255, 255); /* For visibility */
-    /* Other styling as needed */
+    border: 1px dashed rgb(255, 255, 255);
 }
 
 
 .grid-cell-first {
-    position: fixed; /* Fixed positioning relative to the viewport */
-    top: 0; /* Align to the top of the viewport */
-    left: 0; /* Align to the left of the viewport */
-    z-index: 10; /* Ensure it stays above other elements */
-    /* Other styles (font, color, etc.) */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 10;
     justify-content: center;
     align-items: center;
     font-weight: normal;
     color: #ffffff;
-    font-family: 'Red Hat Mono', monospace; /* Setting the font */
+    font-family: 'Red Hat Mono', monospace; 
     font-size: 48px;
     padding-left: 5px;
 }
 
 
 
-/* Additional styling for the 'White Box' if it remains */
-#white-box {
-    grid-column: 5 / span 3; /* Adjust if needed */
-    grid-row: 6 / span 3; /* Adjust if needed */
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(35, 219, 133)0;
-    font-family: 'Red Hat Mono', monospace;
-}
 
 
-#shearedImage {
-    transform:  skewY(150deg); /* Skews the image 20 degrees along the X-axis */
+.container {
+    position: relative;
+    width: 2638px; 
+    height: 2075px;
+  }
 
-    grid-column: 12 / span 1; /* Adjust if needed */
-    grid-row: 10 / span 1;
+  .division {
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+  }
 
+ 
+  #div1_TD {
+    background: #FF1010;
+    clip-path: polygon(872.057px 0px, 1353px 781px, 946.242px 1072px, 0px 912px, 0px 0px);
+  }
+
+  #TD_background {
+    object-fit: scale-down;
     
-    display: flex;
-
-}
+  }
 
 
+  #div2_K {
+    background: #FFE600; 
+  clip-path: polygon(2638px 0px, 2638px 552px, 1358.5px 779.5px, 884.5px 0px);
+  }
+
+  #div3_SG {
+    background: #00FF19; 
+    clip-path: polygon(2638px 561px, 2638px 1191px, 1705px 1309.5px, 952.5px 1082.5px, 1357px 784.5px, 2638px 561px);
+  }
+
+  #div4_H {
+    background: #FF7A00; 
+    clip-path: polygon(953px 1101px, 1693px 1322px, 797.5px 2075px, 0px 2075px, 0px 924px, 953px 1101px);
+  }
+
+  #div5_P {
+   
+    background: #0094FF; 
+    clip-path: polygon(1712px 1325px, 2638px 1198px, 2638px 2075px, 812px 2075px, 1712px 1325px);
+  }
 
 
 

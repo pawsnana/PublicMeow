@@ -7,8 +7,10 @@ document.addEventListener("DOMContentLoaded", function() {
         isDragging = true;
         let clientX = e.clientX || e.touches[0].clientX;
         let clientY = e.clientY || e.touches[0].clientY;
-        offsetX = clientX - background.offsetLeft;
-        offsetY = clientY - background.offsetTop;
+        offsetX = clientX - background.offsetLeft; // ....try to make the viewport start point here idk ???? hope thiss workkkk plz 
+        // okay trial 2 - using + insteadd of -...otherwise it jumped backt to very top-left corner Q___Q
+        // trial 3 not that complicated just this one?
+        offsetY = clientY - background.offsetTop; 
     }
 
     function doDrag(e) {
@@ -30,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
         isDragging = false;
     }
 
-    // Mouse events
+    // for mouse 
     background.addEventListener('mousedown', startDrag, true);
     document.addEventListener('mouseup', endDrag, true);
     document.addEventListener('mousemove', doDrag, true);
 
-    // Touch events
+    // for touch 
     background.addEventListener('touchstart', startDrag, true);
     document.addEventListener('touchend', endDrag, true);
     document.addEventListener('touchmove', doDrag, true);
