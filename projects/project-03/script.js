@@ -67,8 +67,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function pickIcon(e) {
         e.dataTransfer.setData('text', e.target.id);
+    
+        // tyr to get the icon's current position before changing to absolute
+        const rect = e.target.getBoundingClientRect();
+        const parentRect = e.target.parentNode.getBoundingClientRect();
+    
+        // set the icon to absolute posiion
         e.target.style.position = 'absolute';
+    
+        // and then adjust the icon's position so it doesn't jump to the centre
+        e.target.style.left = (rect.left - parentRect.left) + 'px';
+        e.target.style.top = (rect.top - parentRect.top) + 'px';
     }
+    
 
     function dragIconOver(e) {
         e.preventDefault();
