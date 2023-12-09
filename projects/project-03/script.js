@@ -82,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // and then adjust the icon's position so it doesn't jump to the centre
         e.target.style.left = (rect.left - parentRect.left) + 'px';
         e.target.style.top = (rect.top - parentRect.top) + 'px';
+
+
+        e.target.style.cursor = 'grabbing';
     }
     
 
@@ -103,6 +106,8 @@ document.addEventListener("DOMContentLoaded", function() {
         e.target.appendChild(icon);
 
         checkCompletion(e.target);
+
+        icon.style.cursor = 'crosshair';
     }
 
     icons.forEach(icon => {
@@ -121,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let iconsInDivision = division.querySelectorAll('.icon');
         let divisionId = division.id;
         let correctIconsForDivisions = {
-            'TD_pickdroplot': ['icon_akali', 'icon_ekko', 'icon_senna'],
+            'TD_pickdroplot': ['icon_akali', 'icon_ekko', 'icon_senna', 'icon_qiyana', 'icon_yasuo'],
             
         };
     
@@ -140,6 +145,20 @@ document.addEventListener("DOMContentLoaded", function() {
             if (divisionId === 'TD_pickdroplot') {
                 console.log('Three correct icons placed. Displaying iframe for:', divisionId);
                 document.getElementById('TD_link').style.display = 'block';
+            }
+
+
+            var overlay = document.getElementById('TD_background_overlay');
+            if (overlay) {
+                overlay.style.display = 'none';
+            }
+    
+            // Change the grey color image transparency to 0% (fully opaque)
+
+
+            var image = document.getElementById('TD_background');
+            if (image) {
+                image.style.opacity = '1.0'; // 0% transparency
             }
         }
     }

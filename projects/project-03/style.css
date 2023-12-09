@@ -30,6 +30,13 @@ body, html {
     left: -679px; /* I want it to start at this x location and y for the top below corresponsing to my figma sketch */ /* trial 2 - need to add around 200px?? */
     top: -659px; 
     z-index: 0;
+
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+
+    
 }
 
 
@@ -83,7 +90,7 @@ body, html {
     text-align: center;
     line-height: 50px;
     margin: 5px;
-    cursor: pointer;
+    cursor: crosshair;
     
     /* position: absolute;  */
     margin-right: 10px; 
@@ -110,10 +117,27 @@ body, html {
     clip-path: polygon(872.057px 0px, 1353px 781px, 946.242px 1072px, 0px 912px, 0px 0px);
 }
 
+
+#TD_background_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.3); 
+    z-index: 0; 
+
+
+    
+}
+
+
+
+
 #TD_background {
     object-fit: scale-down;
-    z-index: -1;
-    
+    z-index: 1;
+    opacity: 0.3;
 }
 
 #TD_pickdroplot {
@@ -121,25 +145,28 @@ body, html {
     width: 750px;
     z-index: 1;
     position: absolute;
-    top: 400px;
-    left: 450px;
+    top: 300px;
+    left: 300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    color: azure;
+    font-size: 24pt;
+    font-family:'Red Hat Mono', monospace;
+    padding: 10px;
+    border-radius: 2%;
+    justify-content: center;
 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+    
 }
 
-#TD_pickdroplot_1 {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    background-color: rgb(255, 104, 215);
-    z-index: 1;
-    
-    display: inline-block;
 
-}
 
 #TD_link {
     display: none; 
