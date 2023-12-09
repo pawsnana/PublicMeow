@@ -68,32 +68,32 @@ body, html {
     background-color: rgba(127, 255, 212, 0.198);
     z-index: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; /*??*/
     flex-wrap: wrap;
     
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap; /* idk???? */
+    flex-wrap: wrap; /* idk???? */
 
 
 }
 
 
 .icon {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: blue;
     color: white;
     text-align: center;
-    line-height: 50px;
-    margin: 5px;
+    line-height: 40px;
+    margin: 2px;
     cursor: crosshair;
     
     /* position: absolute;  */
-    margin-right: 10px; 
+    margin-right: 5px; 
 
     transition: transform 0.5s ease; /* like floaring maybe */
 }
@@ -174,19 +174,84 @@ body, html {
 
 
 
-#div2_K {
-background: #FFE600; 
-  clip-path: polygon(2638px 0px, 2638px 552px, 1358.5px 779.5px, 884.5px 0px);
-}
+#div2_SG {
 
-#div3_SG {
-    background: #00FF19; 
-    clip-path: polygon(2638px 561px, 2638px 1191px, 1705px 1309.5px, 952.5px 1082.5px, 1357px 784.5px, 2638px 561px);
-}
-
-#div4_H {
     background: #FF7A00; 
     clip-path: polygon(953px 1101px, 1693px 1322px, 797.5px 2075px, 0px 2075px, 0px 924px, 953px 1101px);
+
+}
+
+#SG_background_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.3); 
+    z-index: 0; 
+
+
+    
+}
+
+
+
+
+#SG_background {
+    object-fit: scale-down;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+#SG_pickdroplot {
+    height: 500px;
+    width: 750px;
+    z-index: 1;
+    position: absolute;
+    top: 1300px;
+    left: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: azure;
+    font-size: 24pt;
+    font-family:'Red Hat Mono', monospace;
+    padding: 10px;
+    border-radius: 2%;
+    justify-content: center;
+
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+    
+}
+
+
+
+#SG_link {
+    display: none; 
+}
+
+
+
+
+
+
+
+#div3_H {
+    background: #FFE600; 
+    clip-path: polygon(2638px 0px, 2638px 552px, 1358.5px 779.5px, 884.5px 0px);
+
+    
+}
+
+#div4_K {
+    background: #00FF19; 
+    clip-path: polygon(2638px 561px, 2638px 1191px, 1705px 1309.5px, 952.5px 1082.5px, 1357px 784.5px, 2638px 561px);
+    
 }
 
 #div5_P {

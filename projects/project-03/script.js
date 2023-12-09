@@ -126,8 +126,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let iconsInDivision = division.querySelectorAll('.icon');
         let divisionId = division.id;
         let correctIconsForDivisions = {
-            'TD_pickdroplot': ['icon_akali', 'icon_ekko', 'icon_senna', 'icon_qiyana', 'icon_yasuo'],
-            
+            'TD_pickdroplot': ['icon_akali_TD', 'icon_ekko', 'icon_senna', 'icon_qiyana', 'icon_yasuo'],
+            'SG_pickdroplot': ['icon_morgana', 'icon_syndra', 'icon_zoe', 'icon_lulu', 'icon_lux', 'icon_xayah', 'icon_ahri_SG', 'icon_akali_SG'],
         };
     
         let correctIcons = correctIconsForDivisions[divisionId] || [];
@@ -139,29 +139,36 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     
         if (correctCount >= 3) {
-            division.style.backgroundImage = 'url(backgrounds/TD_1.png)';
-            
-            
             if (divisionId === 'TD_pickdroplot') {
-                console.log('Three correct icons placed. Displaying iframe for:', divisionId);
+                console.log('Three correct icons placed in TD_pickdroplot.');
+                division.style.backgroundImage = 'url(backgrounds/TD_1.png)';
                 document.getElementById('TD_link').style.display = 'block';
-            }
-
-
-            var overlay = document.getElementById('TD_background_overlay');
-            if (overlay) {
-                overlay.style.display = 'none';
+                var overlay = document.getElementById('TD_background_overlay');
+                if (overlay) {
+                    overlay.style.display = 'none';
+                }
+                var image = document.getElementById('TD_background');
+                if (image) {
+                    image.style.opacity = '1.0';
+                }
             }
     
-            // Change the grey color image transparency to 0% (fully opaque)
-
-
-            var image = document.getElementById('TD_background');
-            if (image) {
-                image.style.opacity = '1.0'; // 0% transparency
+            if (divisionId === 'SG_pickdroplot') {
+                console.log('Three correct icons placed in SG_pickdroplot.');
+                division.style.backgroundImage = 'url(backgrounds/SG_change.png)';
+                document.getElementById('SG_link').style.display = 'block';
+                var overlay = document.getElementById('SG_background_overlay');
+                if (overlay) {
+                    overlay.style.display = 'none';
+                }
+                var image = document.getElementById('SG_background');
+                if (image) {
+                    image.style.opacity = '1.0';
+                }
             }
         }
     }
+    
     
     
 });
