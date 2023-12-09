@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let clientY = e.clientY || e.touches[0].clientY;
         offsetX = clientX - background.offsetLeft;
         offsetY = clientY - background.offsetTop; 
+        background.style.cursor = 'grab';
     }
 
     function doDragBackground(e) {
@@ -26,11 +27,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // to make the icons looks like floating trial 1
             updateIconPositions(newX, newY);
+
+            background.style.cursor = 'grabbing';
         }
     }
 
     function endDragBackground() {
         isDraggingBackground = false;
+        background.style.cursor = 'default';
     }
 
     // this function is to update icon position when i move the background
@@ -114,11 +118,10 @@ document.addEventListener("DOMContentLoaded", function() {
         let iconsInDivision = division.querySelectorAll('.icon');
         let divisionId = division.id;
         let correctIconsForDivisions = {
-            'div1_TD': ['icon_akali', 'icon_ekko', 'icon_senna'],
+            'TD_pickdroplot': ['icon_akali', 'icon_ekko', 'icon_senna'],
             'div2_K': ['icon_akali', 'icon_ahri', 'icon_kaisa'],
-            
         };
-
+    
         let correctIcons = correctIconsForDivisions[divisionId] || [];
         let correctCount = 0;
         iconsInDivision.forEach(icon => {
@@ -126,9 +129,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 correctCount++;
             }
         });
-
+    
+        console.log(`Division: ${divisionId}, Correct Count: ${correctCount}`);
+    
         if (correctCount >= 3) {
             division.style.backgroundImage = 'url(backgrounds/TD_1.png)';
+            console.log(`Background image set for division: ${divisionId}`);
         }
     }
 });

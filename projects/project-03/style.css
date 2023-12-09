@@ -10,6 +10,12 @@ body, html {
     height: 100%;
     margin: 0;
     overflow: hidden; /* won't scroll i think */
+
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    
 }
 
 /* for making view port default at 489 and 479 */
@@ -86,11 +92,11 @@ body, html {
 }
 
 
-.container {
+/* .container {
     position: relative;
     width: 2638px; 
     height: 2075px;
-  }
+  } */
 
 .division {
     position: absolute;
@@ -110,9 +116,9 @@ body, html {
     
 }
 
-.pick_drop_lot {
+#TD_pickdroplot {
     height: 500px;
-    width: 750px;;
+    width: 750px;
     z-index: 1;
     position: absolute;
     top: 400px;
@@ -124,7 +130,7 @@ body, html {
 
 }
 
-#TD_pickdroplot_1, #TD_pickdroplot_2 #TD_pickdroplot_3 {
+#TD_pickdroplot_1 {
     width: 65px;
     height: 65px;
     border-radius: 50%;
@@ -132,6 +138,7 @@ body, html {
     z-index: 1;
     
     display: inline-block;
+
 }
 
 
