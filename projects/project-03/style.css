@@ -117,7 +117,7 @@ body, html {
     position: absolute;
     top: 400px;
     left: 450px;
-    display: inline-block;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     
@@ -130,8 +130,7 @@ body, html {
     border-radius: 50%;
     background-color: rgb(255, 104, 215);
     z-index: 1;
-    margin: 5px;
-    padding: 10px;
+    
     display: inline-block;
 }
 
