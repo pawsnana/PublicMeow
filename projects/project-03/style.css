@@ -46,8 +46,44 @@ body, html {
     padding-left: 5px;
 }
 
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 150px;
+    background-color: rgba(127, 255, 212, 0.198);
+    z-index: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center; /*??*/
+    flex-wrap: nowrap;
+    
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* idk???? */
 
 
+}
+
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    
+    position: absolute; 
+    margin-right: 10px; 
+
+    transition: transform 0.5s ease; /* like floaring maybe */
+}
 
 
 .container {
@@ -102,15 +138,7 @@ body, html {
 
 
 @media screen and (max-width: 600px) {
-    .grid {
-        /* Scale down the grid to fit the mobile screen */
-        transform-origin: top left; /* Ensure the grid scales down from the top left corner */
-        transform: scale(0.5); /* Adjust this value based on actual viewport sizes */
-    }
-    .grid-cell-first, #white-box {
-        /* Adjust the position and size of elements that should not be scaled */
-        transform: scale(1.0); /* Reset scaling for these elements */
-    }
+    
 }
 
 
