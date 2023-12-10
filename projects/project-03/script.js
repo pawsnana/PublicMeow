@@ -140,6 +140,8 @@ document.addEventListener("DOMContentLoaded", function() {
             'SG_pickdroplot': ['icon_morgana', 'icon_syndra', 'icon_zoe', 'icon_lulu', 'icon_lux', 'icon_xayah', 'icon_ahri_SG', 'icon_akali_SG'],
 
             'H_pickdroplot': ['icon_ezreal', 'icon_kayne', 'icon_sett', 'icon_yone', 'icon_ksante'],
+
+            'K_pickdroplot': ['icon_akali_K', 'icon_ahri_K', 'icon_kaisa_K', 'icon_evelynn_K'],
         };
     
         let correctIcons = correctIconsForDivisions[divisionId] || [];
@@ -203,6 +205,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 HbackgroundOverlay.style.opacity = '0';
                
                 Hiframe.style.display = 'block'; 
+                
+            }
+        }
+
+        if (divisionId === 'K_pickdroplot' && correctCount >= 3) {
+            var Kpickdroplot = document.getElementById('K_pickdroplot');
+            var Kbackground = document.getElementById('K_background');
+            var KbackgroundOverlay = document.getElementById('K_background_overlay');
+            var Kiframe = document.getElementById('K_link');
+    
+            if (Kpickdroplot && Kbackground && KbackgroundOverlay && Kiframe) {
+                Kpickdroplot.style.backgroundImage = 'url(./backgrounds/SG_ahri_light.png)'; 
+                
+                Kbackground.style.opacity = '1.0'; 
+                
+                KbackgroundOverlay.style.opacity = '0';
+               
+                Kiframe.style.display = 'block'; 
                 
             }
         }
