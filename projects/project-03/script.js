@@ -142,6 +142,8 @@ document.addEventListener("DOMContentLoaded", function() {
             'H_pickdroplot': ['icon_ezreal', 'icon_kayne', 'icon_sett', 'icon_yone', 'icon_ksante'],
 
             'K_pickdroplot': ['icon_akali_K', 'icon_ahri_K', 'icon_kaisa_K', 'icon_evelynn_K'],
+
+            'P_pickdroplot': ['icon_olaf', 'icon_sona', 'icon_kayle', 'icon_karthus'],
         };
     
         let correctIcons = correctIconsForDivisions[divisionId] || [];
@@ -216,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var Kiframe = document.getElementById('K_link');
     
             if (Kpickdroplot && Kbackground && KbackgroundOverlay && Kiframe) {
-                Kpickdroplot.style.backgroundImage = 'url(./backgrounds/SG_ahri_light.png)'; 
+                Kpickdroplot.style.backgroundImage = 'url(./backgrounds/K_cover.jpg)'; 
                 
                 Kbackground.style.opacity = '1.0'; 
                 
@@ -227,7 +229,23 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-
+        if (divisionId === 'P_pickdroplot' && correctCount >= 3) {
+            var Ppickdroplot = document.getElementById('P_pickdroplot');
+            var Pbackground = document.getElementById('P_background');
+            var PbackgroundOverlay = document.getElementById('P_background_overlay');
+            var Piframe = document.getElementById('P_link');
+    
+            if (Ppickdroplot && Pbackground && PbackgroundOverlay && Piframe) {
+                Ppickdroplot.style.backgroundImage = 'url(./backgrounds/'; 
+                
+                Pbackground.style.opacity = '1.0'; 
+                
+                PbackgroundOverlay.style.opacity = '0';
+               
+                Piframe.style.display = 'block'; 
+                
+            }
+        }
     }
     
     
