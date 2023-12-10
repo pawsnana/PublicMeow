@@ -251,6 +251,40 @@ document.addEventListener("DOMContentLoaded", function() {
     
     
     
+    //for icon info
+    document.querySelectorAll('.icon').forEach(icon => {
+        icon.addEventListener('mouseenter', (event) => showInfoBox(event.target.id));
+        icon.addEventListener('mouseleave', hideInfoBox);
+    });
+    
+    function showInfoBox(iconId) {
+        const infoBox = document.getElementById('infoBox') || createInfoBox();
+        const contentId = 'content_' + iconId;
+        const content = document.getElementById(contentId);
+    
+        if (content) {
+            infoBox.innerHTML = content.innerHTML; // Copy content into the info box
+            infoBox.style.display = 'block'; // Show the box
+        }
+    }
+    
+    function hideInfoBox() {
+        const infoBox = document.getElementById('infoBox');
+        if (infoBox) {
+            infoBox.style.display = 'none';
+        }
+    }
+    
+    function createInfoBox() {
+        const infoBox = document.createElement('div');
+        infoBox.id = 'infoBox';
+        document.body.appendChild(infoBox);
+        return infoBox;
+    }
+
+
+
+
     
 });
 

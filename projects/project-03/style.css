@@ -110,6 +110,31 @@ body, html {
 }
 
 
+
+/* the the icon's info */
+.hidden {
+    display: none;
+}
+
+.icon-content {
+    font-size: 12pt;
+}
+
+#infoBox {
+    width: 300px;
+    height: 500px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100; /* Above other elements */
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: none; /* Initially hidden */
+}
+
+
 /* .container {
     position: relative;
     width: 2638px; 
