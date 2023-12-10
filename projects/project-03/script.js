@@ -249,39 +249,49 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     
-    
-    
-    //for icon info
+
+
+
+    //this is for icon info
     document.querySelectorAll('.icon').forEach(icon => {
+        console.log('Adding event listeners to icon:', icon.id);
         icon.addEventListener('mouseenter', (event) => showInfoBox(event.target.id));
         icon.addEventListener('mouseleave', hideInfoBox);
     });
-    
+
     function showInfoBox(iconId) {
+        console.log('showInfoBox called for:', iconId);
         const infoBox = document.getElementById('infoBox') || createInfoBox();
         const contentId = 'content_' + iconId;
         const content = document.getElementById(contentId);
-    
+        console.log('Content ID:', contentId);
+
         if (content) {
-            infoBox.innerHTML = content.innerHTML; // Copy content into the info box
-            infoBox.style.display = 'block'; // Show the box
+            console.log('Content found for:', iconId);
+            infoBox.innerHTML = content.innerHTML;
+            infoBox.style.display = 'block';
+        } else {
+            console.log('No content found for:', iconId);
         }
     }
-    
+
     function hideInfoBox() {
+        console.log('hideInfoBox called');
         const infoBox = document.getElementById('infoBox');
         if (infoBox) {
             infoBox.style.display = 'none';
         }
     }
-    
+
     function createInfoBox() {
+        console.log('Creating infoBox');
         const infoBox = document.createElement('div');
         infoBox.id = 'infoBox';
         document.body.appendChild(infoBox);
         return infoBox;
     }
-
+    
+    
 
 
 
