@@ -37,19 +37,28 @@ document.addEventListener("DOMContentLoaded", function() {
         background.style.cursor = 'default';
     }
 
-    // this function is to update icon position when i move the background
-    function updateIconPositions(backgroundX, backgroundY) {
-        let icons = document.querySelectorAll('.icon'); 
-        icons.forEach(icon => {
-            let deltaX = backgroundX - parseInt(icon.getAttribute('data-initial-x') || 0);
-            let deltaY = backgroundY - parseInt(icon.getAttribute('data-initial-y') || 0);
+    // the floating
+//     function updateIconPositions(backgroundX, backgroundY) {
+//     //  only the icons within the navbar
+//     let navbar = document.getElementById('navbar');
+//     let icons = navbar.querySelectorAll('.icon');
 
-            let iconNewX = deltaX * 0.05; 
-            let iconNewY = deltaY * 0.05; 
+//     icons.forEach(icon => {
+        
+//         let initialX = parseInt(icon.getAttribute('data-initial-x') || 0);
+//         let initialY = parseInt(icon.getAttribute('data-initial-y') || 0);
 
-            icon.style.transform = `translate(${iconNewX}px, ${iconNewY}px)`;
-        });
-    }
+        
+//         let deltaX = backgroundX - initialX;
+//         let deltaY = backgroundY - initialY;
+
+//         let iconNewX = deltaX * 0.05; 
+//         let iconNewY = deltaY * 0.05;
+
+//         // make the new positions???
+//         icon.style.transform = `translate(${iconNewX}px, ${iconNewY}px)`;
+//     });
+// }
 
     // idk how to fix these Q___Q crying ....
     let icons = document.querySelectorAll('.icon');
@@ -127,7 +136,10 @@ document.addEventListener("DOMContentLoaded", function() {
         let divisionId = division.id;
         let correctIconsForDivisions = {
             'TD_pickdroplot': ['icon_akali_TD', 'icon_ekko', 'icon_senna', 'icon_qiyana', 'icon_yasuo'],
+
             'SG_pickdroplot': ['icon_morgana', 'icon_syndra', 'icon_zoe', 'icon_lulu', 'icon_lux', 'icon_xayah', 'icon_ahri_SG', 'icon_akali_SG'],
+
+            'H_pickdroplot': ['icon_ezreal', 'icon_kayne', 'icon_sett', 'icon_yone', 'icon_ksante'],
         };
     
         let correctIcons = correctIconsForDivisions[divisionId] || [];
@@ -137,38 +149,71 @@ document.addEventListener("DOMContentLoaded", function() {
                 correctCount++;
             }
         });
+        
+        console.log('Checking division:', divisionId, 'Correct count:', correctCount);
+
+
+        if (divisionId === 'TD_pickdroplot' && correctCount >= 3) {
+            var TDpickdroplot = document.getElementById('TD_pickdroplot');
+            var TDbackground = document.getElementById('TD_background');
+            var TDbackgroundOverlay = document.getElementById('TD_background_overlay');
+            var TDiframe = document.getElementById('TD_link');
     
-        if (correctCount >= 3) {
-            if (divisionId === 'TD_pickdroplot') {
-                console.log('Three correct icons placed in TD_pickdroplot.');
-                division.style.backgroundImage = 'url(backgrounds/TD_1.png)';
-                document.getElementById('TD_link').style.display = 'block';
-                var overlay = document.getElementById('TD_background_overlay');
-                if (overlay) {
-                    overlay.style.display = 'none';
-                }
-                var image = document.getElementById('TD_background');
-                if (image) {
-                    image.style.opacity = '1.0';
-                }
-            }
-    
-            if (divisionId === 'SG_pickdroplot') {
-                console.log('Three correct icons placed in SG_pickdroplot.');
-                division.style.backgroundImage = 'url(backgrounds/SG_change.png)';
-                document.getElementById('SG_link').style.display = 'block';
-                var overlay = document.getElementById('SG_background_overlay');
-                if (overlay) {
-                    overlay.style.display = 'none';
-                }
-                var image = document.getElementById('SG_background');
-                if (image) {
-                    image.style.opacity = '1.0';
-                }
+            if (TDpickdroplot && TDbackground && TDbackgroundOverlay && TDiframe) {
+                TDpickdroplot.style.backgroundImage = 'url(./backgrounds/TD_1.png)'; 
+                // Change background of TD_pickdroplot
+                TDbackground.style.opacity = '1.0'; 
+                // Adjust opacity of TD_background
+                TDbackgroundOverlay.style.opacity = '0';
+                // Make TD_background_overlay transparent
+                TDiframe.style.display = 'block'; 
+                // Show the TD iframe
             }
         }
+    
+        if (divisionId === 'SG_pickdroplot' && correctCount >= 3) {
+            var SGpickdroplot = document.getElementById('SG_pickdroplot');
+            var SGbackground = document.getElementById('SG_background');
+            var SGbackgroundOverlay = document.getElementById('SG_background_overlay');
+            var SGiframe = document.getElementById('SG_link');
+    
+            if (SGpickdroplot && SGbackground && SGbackgroundOverlay && SGiframe) {
+                SGpickdroplot.style.backgroundImage = 'url(./backgrounds/SG_ahri_light.png)'; 
+                
+                SGbackground.style.opacity = '1.0'; 
+                
+                SGbackgroundOverlay.style.opacity = '0';
+               
+                SGiframe.style.display = 'block'; 
+                
+            }
+        }
+
+        if (divisionId === 'H_pickdroplot' && correctCount >= 3) {
+            var Hpickdroplot = document.getElementById('H_pickdroplot');
+            var Hbackground = document.getElementById('H_background');
+            var HbackgroundOverlay = document.getElementById('H_background_overlay');
+            var Hiframe = document.getElementById('H_link');
+    
+            if (Hpickdroplot && Hbackground && HbackgroundOverlay && Hiframe) {
+                Hpickdroplot.style.backgroundImage = 'url(./backgrounds/H_bright.jpeg)'; 
+                
+                Hbackground.style.opacity = '1.0'; 
+                
+                HbackgroundOverlay.style.opacity = '0';
+               
+                Hiframe.style.display = 'block'; 
+                
+            }
+        }
+
+
     }
     
     
     
+    
+    
 });
+
+
