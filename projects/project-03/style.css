@@ -275,6 +275,7 @@ body, html {
 
 .info_title {
     font-size: 20pt;
+    text-transform: uppercase;
     
 }
 
@@ -283,11 +284,17 @@ body, html {
     font-weight: ;
 }
 
+.info_role {
+    font-size: 9pt;
+    font-weight: ;
+    
+}
 .info_description {
     font-size: 10pt;
     font-weight: ;
     
 }
+
 
 
 
