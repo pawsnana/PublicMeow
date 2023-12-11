@@ -292,6 +292,36 @@ body, html {
 
 
 
+
+
+.copyright-notice {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    color: #FFFFFF;
+    font-family: 'Red Hat Mono', monospace; 
+    font-size: 10px; 
+    padding: 5px; 
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .container {
     position: relative;
     width: 2638px; 
