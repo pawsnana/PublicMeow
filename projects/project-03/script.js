@@ -288,6 +288,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+    // for the starting information like notification
+    document.getElementById('closeBtn').addEventListener('click', function() {
+        document.getElementById('notification').style.display = 'none';
+    });
+
     
 });
 
