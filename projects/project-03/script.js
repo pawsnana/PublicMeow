@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var Piframe = document.getElementById('P_link');
     
             if (Ppickdroplot && Pbackground && PbackgroundOverlay && Piframe) {
-                Ppickdroplot.style.backgroundImage = 'url(./backgrounds/'; 
+                Ppickdroplot.style.backgroundImage = 'url(./backgrounds/P_dark.webp'; 
                 
                 Pbackground.style.opacity = '1.0'; 
                 
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-    
+
 });
 
 

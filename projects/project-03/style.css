@@ -135,7 +135,8 @@ body, html {
     background-color: rgba(255, 255, 255, 0);
     z-index: 1;
     display: flex;
-    justify-content: space-around;
+    
+    gap: 5px;
     align-items: center; /*??*/
    
     border-radius: 1%;
@@ -151,6 +152,8 @@ body, html {
     flex-wrap: wrap; /* idk???? */
     margin-top: 10px;
     margin-right: 10px;
+
+    justify-content: center;
     
 }
 
@@ -158,8 +161,8 @@ body, html {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgba(255, 118, 118, 0.654);
-    color: white;
+    background-color: rgba(255, 118, 118, 0.358);
+    color: rgba(255, 255, 255, 0.726);
     text-align: center;
     line-height: 30px;
     
@@ -167,7 +170,7 @@ body, html {
     border: 1px solid rgb(255, 255, 255);
     /* position: absolute;  */
     
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.625);
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.625); */
     
     overflow: hidden;
    
@@ -175,8 +178,11 @@ body, html {
     align-items: center;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
     cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
 
-    
+    font-family: 'Red Hat Mono', monospace; 
 }
 
 
@@ -437,7 +443,7 @@ img {
     text-align: center; 
     font-size: 18px; 
     border-radius: 2%; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.507); 
     z-index: -10;
     height: 490px;
     width: 740px;
@@ -521,7 +527,7 @@ img {
     text-align: center; 
     font-size: 18px; 
     border-radius: 2%; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.507);
     z-index: -10;
     height: 490px;
     width: 740px;
@@ -604,7 +610,7 @@ img {
     text-align: center; 
     font-size: 18px; 
     border-radius: 2%; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.507); 
     z-index: 10;
     height: 490px;
     width: 740px;
@@ -685,7 +691,7 @@ img {
     text-align: center; 
     font-size: 18px; 
     border-radius: 2%; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.507); 
     z-index: -10;
     height: 490px;
     width: 740px;
@@ -770,7 +776,7 @@ img {
     text-align: center; 
     font-size: 18px; 
     border-radius: 2%; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.507); 
     z-index: -10;
     height: 490px;
     width: 740px;
