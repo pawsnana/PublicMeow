@@ -44,6 +44,7 @@ body, html {
     border: 1px dashed rgb(255, 255, 255);
     margin-top: 10px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 
@@ -58,7 +59,8 @@ body, html {
     color: #ffffff;
     font-family: 'Red Hat Mono', monospace; 
     font-size: 24px;
-    padding-left: 5px;
+    padding: 5px;
+
 }
 
 #subtitle {
@@ -71,24 +73,49 @@ body, html {
     right: 0;
     width: 60%;
     height: 150px;
-    background-color: rgba(255, 255, 255, 0.337);
+    background-color: rgba(255, 255, 255, 0);
     z-index: 1;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center; /*??*/
-    flex-wrap: wrap;
+   
     border-radius: 1%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.254);
-    display: flex;
+    
     flex-direction: row;
     flex-wrap: wrap; /* idk???? */
     margin-top: 10px;
     margin-right: 10px;
+    
+}
 
+#icon_help_Q {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 201, 201);
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin: 2px;
+    cursor: crosshair;
+    
+    /* position: absolute;  */
+    margin-right: 5px; 
+    
+  
+    overflow: hidden;
+   
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 
@@ -96,7 +123,7 @@ body, html {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: rgb(201, 201, 255);
     color: white;
     text-align: center;
     line-height: 40px;
@@ -107,7 +134,7 @@ body, html {
     margin-right: 5px; 
 
     transition: transform 0.5s ease; /* like floaring maybe */
-
+    background-size: cover;
     background-image: cover;
     overflow: hidden;
     display: flex;
@@ -120,9 +147,11 @@ body, html {
 .icon img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
-    scale:97%;
+    object-fit: cover;
+    display: block;
     border: 15px white;
+    scale: 110%;
+    
 }
 
 
@@ -133,7 +162,8 @@ body, html {
 }
 
 .icon-content {
-    font-size: 12pt;
+   ???
+    
 }
 
 #infoBox {
@@ -141,14 +171,38 @@ body, html {
     height: 500px;
     position: fixed;
     left: 10px;
-    top: 100px;
+    top: 120px;
     z-index: 100; /* Above other elements */
-    background-color: rgba(255, 255, 255, 0.242);
+    background-color: rgba(132, 132, 132, 0.727);
     border: 1px solid rgb(255, 255, 255);
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     display: none; /* Initially hidden */
+
+    color: #ffffff;
+    font-family: 'Red Hat Mono', monospace; 
+
+
+
 }
+
+.info_title {
+    font-size: 24pt;
+    
+}
+
+.info_title {
+    font-size: 18pt;
+    font-weight: 600;
+}
+
+.info_title {
+    font-size: 14pt;
+    font-weight: 200;
+    
+}
+
+
 
 
 /* .container {

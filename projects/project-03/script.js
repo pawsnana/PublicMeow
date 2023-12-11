@@ -135,15 +135,15 @@ document.addEventListener("DOMContentLoaded", function() {
         let iconsInDivision = division.querySelectorAll('.icon');
         let divisionId = division.id;
         let correctIconsForDivisions = {
-            'TD_pickdroplot': ['icon_akali_TD', 'icon_ekko', 'icon_senna', 'icon_qiyana', 'icon_yasuo'],
+            'TD_pickdroplot': ['icon_akali_TD', 'icon_ekko_TD', 'icon_senna_TD', 'icon_qiyana_TD', 'icon_yasuo_TD'],
 
-            'SG_pickdroplot': ['icon_morgana', 'icon_syndra', 'icon_zoe', 'icon_lulu', 'icon_lux', 'icon_xayah', 'icon_ahri_SG', 'icon_akali_SG'],
+            'SG_pickdroplot': ['icon_morgana_SG', 'icon_syndra_SG', 'icon_zoe_SG', 'icon_lulu_SG', 'icon_lux_SG', 'icon_xayah_SG', 'icon_ahri_SG', 'icon_akali_SG'],
 
-            'H_pickdroplot': ['icon_ezreal', 'icon_kayne', 'icon_sett', 'icon_yone', 'icon_ksante'],
+            'H_pickdroplot': ['icon_ezreal_H', 'icon_kayn_H', 'icon_sett_H', 'icon_yone_H', 'icon_ksante_H'],
 
             'K_pickdroplot': ['icon_akali_K', 'icon_ahri_K', 'icon_kaisa_K', 'icon_evelynn_K'],
 
-            'P_pickdroplot': ['icon_olaf', 'icon_sona', 'icon_kayle', 'icon_karthus'],
+            'P_pickdroplot': ['icon_olaf_P', 'icon_sona_P', 'icon_kayle_P', 'icon_karthus_P'],
         };
     
         let correctIcons = correctIconsForDivisions[divisionId] || [];
@@ -253,30 +253,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //this is for icon info
-    document.querySelectorAll('.icon').forEach(icon => {
-        console.log('Adding event listeners to icon:', icon.id);
-        icon.addEventListener('mouseenter', (event) => showInfoBox(event.target.id));
-        icon.addEventListener('mouseleave', hideInfoBox);
+    document.querySelectorAll('.icon, .help, #icon_game_LOL').forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            showInfoBox(this.id);
+        });
+        element.addEventListener('mouseleave', hideInfoBox);
     });
 
-    function showInfoBox(iconId) {
-        console.log('showInfoBox called for:', iconId);
+    function showInfoBox(elementId) {
         const infoBox = document.getElementById('infoBox') || createInfoBox();
-        const contentId = 'content_' + iconId;
+        const contentId = 'content_' + elementId;
         const content = document.getElementById(contentId);
-        console.log('Content ID:', contentId);
 
         if (content) {
-            console.log('Content found for:', iconId);
             infoBox.innerHTML = content.innerHTML;
             infoBox.style.display = 'block';
-        } else {
-            console.log('No content found for:', iconId);
         }
     }
 
     function hideInfoBox() {
-        console.log('hideInfoBox called');
         const infoBox = document.getElementById('infoBox');
         if (infoBox) {
             infoBox.style.display = 'none';
@@ -284,13 +279,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function createInfoBox() {
-        console.log('Creating infoBox');
         const infoBox = document.createElement('div');
         infoBox.id = 'infoBox';
         document.body.appendChild(infoBox);
         return infoBox;
     }
-    
     
 
 
