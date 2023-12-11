@@ -61,6 +61,22 @@ body, html {
 
 
 
+#welcome {
+    font-size: 24pt;
+    font-weight: 200;
+}
+
+#opening {
+    font-size: 16pt;
+    font-weight: ;
+}
+
+#tips {
+    font-size: 15pt;
+    font-weight: ;
+}
+
+
 
 
 /* for making view port default at 489 and 479 */
