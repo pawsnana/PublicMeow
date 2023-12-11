@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         background.style.cursor = 'default';
     }
 
-    // the floating
+    // the floating function nvm
 //     function updateIconPositions(backgroundX, backgroundY) {
 //     //  only the icons within the navbar
 //     let navbar = document.getElementById('navbar');
