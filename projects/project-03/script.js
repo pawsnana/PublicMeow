@@ -149,14 +149,44 @@ document.addEventListener("DOMContentLoaded", function() {
         let correctIcons = correctIconsForDivisions[divisionId] || [];
         let correctCount = 0;
         iconsInDivision.forEach(icon => {
-            if (correctIcons.includes(icon.id)) {
-                correctCount++;
+            if (divisionId !== 'navbar') { // Check if the division is not the navbar
+                if (correctIcons.includes(icon.id)) {
+                    correctCount++;
+                    hideWarningMessage(icon); // Hide warning if the icon is in the correct division
+                } else {
+                    showWarningMessage(icon); // Show warning if it is in the wrong div
+                }
             }
         });
         
         console.log('Checking division:', divisionId, 'Correct count:', correctCount);
 
 
+        // for wrong ones
+        function showWarningMessage(icon) {
+            let existingMessage = icon.querySelector('.warning-message');
+            if (!existingMessage) {
+                let message = document.createElement('div');
+                message.classList.add('warning-message');
+                message.innerText = "X";
+                icon.appendChild(message);
+            }
+        }
+        
+        function hideWarningMessage(icon) {
+            let message = icon.querySelector('.warning-message');
+            if (message) {
+                icon.removeChild(message);
+            }
+        }
+
+
+
+
+
+
+
+        // for correct ones
         if (divisionId === 'TD_pickdroplot' && correctCount >= 3) {
             var TDpickdroplot = document.getElementById('TD_pickdroplot');
             var TDbackground = document.getElementById('TD_background');
@@ -317,5 +347,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
-
-
