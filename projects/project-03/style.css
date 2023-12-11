@@ -27,8 +27,9 @@ body, html {
     width: 2638px; 
     height: 2075px;
     position: absolute;
-    left: -679px; /* I want it to start at this x location and y for the top below corresponsing to my figma sketch */ /* trial 2 - need to add around 200px?? */
-    top: -659px; 
+    left: -769px; /* I want it to start at this x location and y for the top below corresponsing to my figma sketch */ /* trial 2 - need to add around 200px?? */  /* originally want this location - left: -679px;  top: -659px; but redo the layout again */
+    
+    top: -754px; 
     z-index: 0;
 
     user-select: none;
@@ -99,17 +100,17 @@ body, html {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: rgb(255, 201, 201);
+    background-color: rgba(255, 118, 118, 0.654);
     color: white;
     text-align: center;
     line-height: 30px;
-    margin: 2px;
+    
     cursor: crosshair;
-    
+    border: 1px solid rgb(255, 255, 255);
     /* position: absolute;  */
-    margin-right: 5px; 
     
-  
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.625);
+    
     overflow: hidden;
    
     justify-content: center; 
@@ -142,6 +143,8 @@ body, html {
     align-items: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
    
+    border: 1px solid rgba(144, 144, 144, 0.407);
+
 }
 
 .icon img {
