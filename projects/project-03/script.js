@@ -294,6 +294,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     
+
+
+
+
+   // for the RESET buttom
+    let originalIconLocations = {};
+
+    // Store original locations when the page loads
+    window.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.icon').forEach(icon => {
+            originalIconLocations[icon.id] = icon.parentNode.id;
+        });
+    });
+
+
+
+    // a Function to reset icon locations for this <div class="reset" id="icon_reset_R"></div>
+    
+
+
+
+    
 });
 
 

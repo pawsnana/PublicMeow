@@ -78,6 +78,7 @@ body, html {
     -moz-user-select: none; 
     -ms-user-select: none;
 
+    background-color: #eeeeee65;
     
 }
 
@@ -158,7 +159,33 @@ body, html {
     align-items: center;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
     cursor: pointer;
+
+    
 }
+
+
+#icon_reset_R {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 123, 255, 0.654); /* Different color for distinction */
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    
+    cursor: pointer; /* Change to pointer to indicate clickability */
+    border: 1px solid rgb(255, 255, 255);
+    
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.625);
+    
+    overflow: hidden;
+   
+    justify-content: center; 
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
 
 
 .icon {
@@ -185,7 +212,7 @@ body, html {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
    
     border: 1px solid rgba(144, 144, 144, 0.407);
-
+    
 }
 
 .icon img {
@@ -263,8 +290,19 @@ body, html {
     -webkit-user-select: none; 
     -moz-user-select: none; 
     -ms-user-select: none;
+
+    /* so that the hover enlarge will looks more normal*/
+    transition: transform 0.3s ease-in-out;
+    
+    /* idk why shadows don't show Q_Q */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#div1_TD:hover, #div2_SG:hover, #div3_H:hover, #div4_K:hover, #div5_P:hover {
+    transform: scale(1.01);
     
 }
+
 
 img {
     user-select: none;
@@ -334,6 +372,26 @@ img {
 }
 
 
+#TD_pickdroplot:hover::after {
+    content: "Grab 3 TRUE DAMAGE Champions here!"; 
+    position: absolute; 
+    width: 100%; 
+    bottom: 0px; 
+    left: 0; 
+    padding: 5px; 
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    text-align: center; 
+    font-size: 18px; 
+    border-radius: 2%; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    z-index: -10;
+    height: 490px;
+    width: 740px;
+}
+
+
+
 
 #TD_link {
     display: none; 
@@ -398,7 +456,23 @@ img {
     
 }
 
-
+#SG_pickdroplot:hover::after {
+    content: "Grab 3 STAR GUARDIAN Champions here!"; 
+    position: absolute; 
+    width: 100%; 
+    bottom: 0px; 
+    left: 0; 
+    padding: 5px; 
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    text-align: center; 
+    font-size: 18px; 
+    border-radius: 2%; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    z-index: -10;
+    height: 490px;
+    width: 740px;
+}
 
 #SG_link {
     display: none; 
@@ -450,7 +524,7 @@ img {
     color: azure;
     font-size: 24pt;
     font-family:'Red Hat Mono', monospace;
-    padding: 10px;
+    padding: -10px;
     border-radius: 2%;
     background-color: rgba(249, 255, 181, 0.568);
     justify-content: center;
@@ -462,6 +536,25 @@ img {
     
 
     
+}
+
+
+#H_pickdroplot:hover::after {
+    content: "Grab 3 HEARTSTEEL Champions here!"; 
+    position: absolute; 
+    width: 100%; 
+    bottom: 0px; 
+    left: 0; 
+    padding: 5px; 
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    text-align: center; 
+    font-size: 18px; 
+    border-radius: 2%; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    z-index: 10;
+    height: 490px;
+    width: 740px;
 }
 
 
@@ -524,6 +617,25 @@ img {
     
 
     
+}
+
+
+#K_pickdroplot:hover::after {
+    content: "Grab 3 K/DA Champions here!"; 
+    position: absolute; 
+    width: 100%; 
+    bottom: 0px; 
+    left: 0; 
+    padding: 5px; 
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    text-align: center; 
+    font-size: 18px; 
+    border-radius: 2%; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    z-index: -10;
+    height: 490px;
+    width: 740px;
 }
 
 
@@ -593,13 +705,32 @@ img {
 }
 
 
+#P_pickdroplot:hover::after {
+    content: "Grab 3 PENTAKILL Champions here!"; 
+    position: absolute; 
+    width: 100%; 
+    bottom: 0px; 
+    left: 0; 
+    padding: 5px; 
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    text-align: center; 
+    font-size: 18px; 
+    border-radius: 2%; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    z-index: -10;
+    height: 490px;
+    width: 740px;
+}
+
+
 
 #P_link {
     display: none; 
 }
 
 
-
+/* wrong one pop out text*/
 
 
 
