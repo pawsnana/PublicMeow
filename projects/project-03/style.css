@@ -33,21 +33,21 @@ body, html {
     width: 900px; 
     height: 550px;
     font-family: 'Red Hat Mono', monospace; 
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .close-btn {
     position: absolute;
     top: 420px;
     right: 350px;
-    font-size: 40px;
+    font-size: 35px;
     inline-size: 40px;
     cursor: pointer;
     border: 1px solid #ddd;
     border-radius: 5%;
     
     padding-left: 5px;
-    padding-top: 12px;
+    padding-top: 17px;
     text-align: center;
     height: 80px;
     width: 180px;
@@ -253,23 +253,23 @@ body, html {
     color: #ffffff;
     font-family: 'Red Hat Mono', monospace; 
 
-
+    
 
 }
 
 .info_title {
-    font-size: 24pt;
+    font-size: 20pt;
     
 }
 
-.info_title {
-    font-size: 18pt;
-    font-weight: 600;
+.info_subitle {
+    font-size: 16pt;
+    font-weight: ;
 }
 
-.info_title {
-    font-size: 14pt;
-    font-weight: 200;
+.info_description {
+    font-size: 10pt;
+    font-weight: ;
     
 }
 
