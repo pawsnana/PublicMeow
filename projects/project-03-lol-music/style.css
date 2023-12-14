@@ -34,8 +34,20 @@ body, html {
     height: 550px;
     font-family: 'Red Hat Mono', monospace; 
     font-size: 20px;
+
+    opacity: 0; /* Start with the div being invisible */
+    animation: showAfterDelay 0s forwards; /* Animation name, duration, and fill mode */
+    animation-delay: 0.6s;
 }
 
+@keyframes showAfterDelay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; /* End with the div being fully visible */
+    }
+}
 .close-btn {
     position: absolute;
     top: 420px;
@@ -53,6 +65,11 @@ body, html {
     width: 180px;
 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.253);
+}
+
+.close-btn:hover {
+    scale: 102%;
+    background-color: rgba(102, 102, 102, 0.715); 
 }
 
 .notification p {
@@ -214,7 +231,7 @@ body, html {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgb(201, 201, 255);
+    background-color: rgba(201, 201, 255, 0);
     color: white;
     text-align: center;
     line-height: 40px;
